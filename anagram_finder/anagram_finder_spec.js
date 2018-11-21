@@ -7,6 +7,11 @@ describe('AnagramFinder', function () {
     assert.deepStrictEqual(anagramFinder.countLetters('steve'), { t: 1, s: 1, e: 2, v:1})
   });
 
+  it('should be able to add up the letters of a word empty', function () {
+    const anagramFinder = new AnagramFinder('act');
+    assert.deepStrictEqual(anagramFinder.countLetters(''), {})
+  });
+
   it('should be able to detect an anagram', function () {
     const anagramFinder = new AnagramFinder('act');
     assert.deepStrictEqual(anagramFinder.findAnagrams(['cat', 'dog']), ['cat']);
