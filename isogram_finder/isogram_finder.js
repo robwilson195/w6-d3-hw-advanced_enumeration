@@ -1,5 +1,5 @@
 const IsogramFinder = function (word) {
-  this.word = word.split('');
+  this.word = word.toUpperCase().split('');
 }
 
 IsogramFinder.prototype.quantityOfLetter = function (searchLetter) {
@@ -11,7 +11,9 @@ IsogramFinder.prototype.quantityOfLetter = function (searchLetter) {
 };
 
 IsogramFinder.prototype.isIsogram = function () {
-
+  return this.word.every((letter) => {
+    return this.quantityOfLetter(letter) === 1;
+  });
 };
 
 module.exports = IsogramFinder;
