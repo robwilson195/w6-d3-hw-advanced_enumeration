@@ -4,7 +4,7 @@ const IsogramFinder = require('./isogram_finder.js');
 describe('IsogramFinder', function () {
   it('should be able to count the number of a certain letter present', function () {
     const isogramFinder = new IsogramFinder('repeated');
-    assert.strictEqual(isogramFinder.quantityOfLetter('r'), 1);
+    assert.strictEqual(isogramFinder.quantityOfLetter('e'), 3);
   });
 
   xit('should be able to detect an isogram', function () {
